@@ -20,7 +20,7 @@ public class assignment2
         driver.get("https://phptravels.com/demo ");
         driver.manage().window().maximize();
 
-        String t = driver.findElement(By.xpath("//*[name()='text' and @id='PHPTRAVELS']")).getText();
+        String t = driver.getTitle();
         if(t.equals("PHPTRAVELS"))
             System.out.println("PASS");
         else
@@ -29,8 +29,8 @@ public class assignment2
         String parentwindow = driver.getWindowHandle();
 
         driver.findElement(By.xpath("//a[@class='lvl-0 sign-in btn btn-md btn-white-outline']")).click();
-        String t1 = driver.getTitle();
-
+       String t1 = driver.getTitle();
+       
         if(t1.equals(t))
             System.out.println("PASS");
         else
