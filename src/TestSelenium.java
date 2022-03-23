@@ -9,6 +9,7 @@ public class TestSelenium {
         ChromeDriver driver=new ChromeDriver();
         driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login");
         WebElement element=driver.findElement(By.xpath("//input[@name='emailid']"));
+        WebElement element1 = driver.findElement(By.xpath("//input@name = 'password']"));
         element.sendKeys("abc@gmail.com");
 
         WebElement button=driver.findElement(By.xpath("//input[@name='btnLogin']"));
