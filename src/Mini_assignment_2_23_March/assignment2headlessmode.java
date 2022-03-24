@@ -10,7 +10,7 @@ public class assignment2headlessmode {
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32 (1)\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
         checkTitle(driver);
 
     }
