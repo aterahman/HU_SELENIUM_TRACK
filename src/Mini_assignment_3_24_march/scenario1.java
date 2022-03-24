@@ -27,8 +27,10 @@ public class scenario1
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//a[normalize-space()='Frames']")).click();
         driver.findElement(By.xpath("//a[normalize-space()='Nested Frames']")).click();
-       String t = driver.switchTo().frame("").getTitle();
+       driver.switchTo().frame("LEFT");
+      String t = driver.getTitle();
         System.out.println(t);
+        driver.quit();
     }
 
 }
